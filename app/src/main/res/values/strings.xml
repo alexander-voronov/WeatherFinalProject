@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">My Weather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="temperature_label">Температура</string>
+    <string name="feels_like_label">Ощущается как</string>
+    <string name="city_coordinates">lt/ln: %s, %s</string>
+    <string name="error">Ошибка</string>
+    <string name="try_again">Попробуйте ещё раз</string>
+    <string name="success">Получилось</string>
+    <string name="air_plain_mode">Активирован режим \"Самолёт\"</string>
+    <string name="bad_request">Error 400(Bad Request)</string>
+    <string name="unauthorized">Error 401 (Unauthorized)</string>
+    <string name="payment_required">Error 402 (Payment Required)</string>
+    <string name="forbidden">Error 403 (Forbidden)</string>
+    <string name="not_found">Error 404 (Not Found)</string>
+    <string name="IOE_exception">Ошибка доступа к серверу</string>
+    <string name="history">History</string>
+    <string name="contacts">Contacts</string>
+    <string name="read_contacts">Доступ к контактам</string>
+    <string name="access_contacts">Для корректной работы приложения, треубется доступ к контактам.</string>
+    <string name="ok">Предоставить доступ</string>
+    <string name="no">Отклонить</string>
+
+    <!-- lesson 10-->
+    <string name="dialog_button_close">Закрыть</string>
+    <string name="dialog_title_no_gps">Доступ к геолокации закрыт</string>
+    <string name="dialog_message_no_gps">Разрешите доступ к геолокации, если хотите узнать погоду текущего места</string>
+    <string name="dialog_title_gps_turned_off">GPS отключён</string>
+    <string name="dialog_message_last_location_unknown">Местонахождение неизвестно. Включите GPS, если хотите получить погоду по текущему адресу</string>
+    <string name="dialog_message_last_known_location">Показана последняя известная локация. Включите GPS, если хотите обновить местонахождение</string>
+    <string name="dialog_rationale_title">Доступ к геолокации</string>
+    <string name="dialog_rationale_message">Объяснение</string>
+    <string name="dialog_rationale_give_access">Предоставить доступ</string>
+    <string name="dialog_rationale_decline">Не надо</string>
+    <string name="dialog_address_title">Ваш адрес</string>
+    <string name="dialog_address_get_weather">Узнать погоду</string>
+
+    <string name="test_title">Test title</string>
+    <string name="test_text">Test text</string>
+    <string name="channel_name">Channel name:</string>
+    <string name="channel_description">Description:</string>
+    <string name="channel_description_priority_max">Важные уведомления для</string>
+    <string name="channel_description_priority_default">Информационные уведомления для</string>
+
+</resources>
