@@ -1,11 +1,11 @@
 package com.home.myweather.repository
 
 
+import com.google.gson.GsonBuilder
+import com.home.myweather.BuildConfig
 import com.home.myweather.YANDEX_API_URL
 import com.home.myweather.model.WeatherDTO
 import com.home.myweather.view.MyApp.Companion.retrofit
-import com.google.gson.GsonBuilder
-import com.home.myweather.BuildConfig
 import retrofit2.Callback
 import retrofit2.converter.gson.GsonConverterFactory
 

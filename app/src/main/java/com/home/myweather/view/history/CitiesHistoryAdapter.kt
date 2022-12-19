@@ -1,5 +1,6 @@
 package com.home.myweather.view.history
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.request.ImageRequest
-
-import com.home.myweather.model.Weather
 import com.home.myweather.databinding.FragmentHistoryRecyclerCityItemBinding
+import com.home.myweather.model.Weather
 
-class CitiesHistoryAdapter(val listener: HistoryFragment) :
+class CitiesHistoryAdapter :
     RecyclerView.Adapter<CitiesHistoryAdapter.HistoryCityViewHolder>() {
 
     private var weatherData: List<Weather> = listOf()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setWeather(data: List<Weather>) {
         this.weatherData = data
         notifyDataSetChanged()
