@@ -10,10 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import com.home.myweather.REQUEST_CODE
-import com.home.myweather.view.BaseFragment
 import com.home.myweather.R
+import com.home.myweather.REQUEST_CODE
 import com.home.myweather.databinding.FragmentContentProviderContactsBinding
+import com.home.myweather.view.BaseFragment
 
 class ContentProviderContactsFragment :
     BaseFragment<FragmentContentProviderContactsBinding>(FragmentContentProviderContactsBinding::inflate) {
@@ -44,6 +44,7 @@ class ContentProviderContactsFragment :
         requestPermissions(arrayOf(Manifest.permission.READ_CONTACTS), REQUEST_CODE)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,

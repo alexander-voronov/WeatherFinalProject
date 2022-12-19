@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.home.myweather.R
 import com.home.myweather.contentProvider.ContentProviderContactsFragment
+import com.home.myweather.databinding.ActivityMainBinding
 import com.home.myweather.googleMaps.MapsFragment
 import com.home.myweather.view.history.HistoryFragment
 import com.home.myweather.view.main.MainFragment
-import com.home.myweather.R
-import com.home.myweather.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,7 +65,11 @@ class MainActivity : AppCompatActivity() {
                 val fragmentMaps = supportFragmentManager.findFragmentByTag("maps_fragments")
                 if (fragmentMaps == null) {
                     supportFragmentManager.apply {
-                        beginTransaction().replace(R.id.main_activity_container, MapsFragment(),"maps_fragments")
+                        beginTransaction().replace(
+                            R.id.main_activity_container,
+                            MapsFragment(),
+                            "maps_fragments"
+                        )
                             .addToBackStack("").commit()
                     }
                 }

@@ -87,7 +87,7 @@ class MainFragment : Fragment(), OnMyItemClickListener {
             val listAddress = geocoder.getFromLocation(location.latitude, location.longitude, 1)
             requireActivity().runOnUiThread {
                 showAddressDialog(
-                    listAddress[0].getAddressLine(0),
+                    listAddress!![0].getAddressLine(0),
                     location
                 )
             }

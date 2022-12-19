@@ -15,7 +15,7 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>(FragmentHistoryBind
     AdapterView.OnItemClickListener {
 
     private val adapter: CitiesHistoryAdapter by lazy {
-        CitiesHistoryAdapter(this)
+        CitiesHistoryAdapter()
     }
 
     private val viewModel: HistoryViewModel by lazy {
@@ -40,6 +40,8 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>(FragmentHistoryBind
             is AppState.Success -> {
                 adapter.setWeather(appState.weatherData)
             }
+            is AppState.Error -> TODO()
+            is AppState.Loading -> TODO()
         }
     }
 

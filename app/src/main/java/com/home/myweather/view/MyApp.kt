@@ -3,10 +3,9 @@ package com.home.myweather.view
 import android.app.Application
 import androidx.room.Room
 import com.home.myweather.DB_NAME
-
+import com.home.myweather.R
 import com.home.myweather.room.HistoryDatabase
 import com.home.myweather.room.HistoryWeatherDao
-import com.home.myweather.R
 import retrofit2.Retrofit
 import java.util.*
 

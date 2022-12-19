@@ -48,7 +48,7 @@ data class Fact(
 
     @SerializedName("wind_gust")
     val windGust: Double
-): Parcelable
+) : Parcelable
 
 @Parcelize
 data class Forecast(
@@ -68,7 +68,7 @@ data class Forecast(
     val moonText: String,
 
     val parts: List<Part>
-): Parcelable
+) : Parcelable
 
 @Parcelize
 data class Part(
@@ -118,12 +118,12 @@ data class Part(
 
     val daytime: String,
     val polar: Boolean
-): Parcelable
+) : Parcelable
 
 @Parcelize
 data class Info(
     val url: String,
     val lat: Double,
     val lon: Double
-): Parcelable
+) : Parcelable
 

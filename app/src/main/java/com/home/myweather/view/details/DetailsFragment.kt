@@ -1,5 +1,6 @@
 package com.home.myweather.view.details
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -7,16 +8,16 @@ import androidx.lifecycle.ViewModelProvider
 import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.load
-import coil.request.ImageRequest
-import com.home.myweather.BUNDLE_KEY
 
+import coil.request.ImageRequest
+import com.google.android.material.snackbar.Snackbar
+import com.home.myweather.BUNDLE_KEY
+import com.home.myweather.R
+import com.home.myweather.databinding.FragmentDetailsBinding
 import com.home.myweather.model.Weather
 import com.home.myweather.view.BaseFragment
 import com.home.myweather.viewmodel.AppState
 import com.home.myweather.viewmodel.DetailsViewModel
-import com.google.android.material.snackbar.Snackbar
-import com.home.myweather.R
-import com.home.myweather.databinding.FragmentDetailsBinding
 import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>(FragmentDetailsBinding::inflate) {
@@ -59,6 +60,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(FragmentDetailsBind
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setWeatherData(weather: Weather) {
         with(binding) {
             weather.city = localWeather.city

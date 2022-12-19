@@ -1,13 +1,13 @@
 package com.home.myweather.googleMaps
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.location.Geocoder
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
-import com.home.myweather.view.BaseFragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -18,6 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.home.myweather.R
 import com.home.myweather.databinding.FragmentGoogleMapsMainBinding
+import com.home.myweather.view.BaseFragment
 
 class MapsFragment :
     BaseFragment<FragmentGoogleMapsMainBinding>(FragmentGoogleMapsMainBinding::inflate) {
@@ -25,6 +26,7 @@ class MapsFragment :
     private lateinit var map: GoogleMap
     private val markers = arrayListOf<Marker>()
 
+    @SuppressLint("MissingPermission")
     private val callback = OnMapReadyCallback { googleMap ->
         map = googleMap
         val m = LatLng(54.0, 37.0)
@@ -71,7 +73,7 @@ class MapsFragment :
             val geocoder = Geocoder(requireContext())
             val listAddress = geocoder.getFromLocation(location.latitude, location.longitude, 1)
             requireActivity().runOnUiThread {
-                binding.textAddress.text = listAddress[0].getAddressLine(0)
+                binding.textAddress.text = listAddress!![0].getAddressLine(0)
             }
         }.start()
     }
@@ -95,7 +97,7 @@ class MapsFragment :
                 map.moveCamera(
                     CameraUpdateFactory.newLatLngZoom(
                         LatLng(
-                            listAddress[0].latitude,
+                            listAddress!![0].latitude,
                             listAddress[0].longitude
                         ), 10f
                     )

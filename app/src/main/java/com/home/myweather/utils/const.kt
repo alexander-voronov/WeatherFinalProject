@@ -6,6 +6,6 @@ const val YANDEX_API_URL = "https://api.weather.yandex.ru/"
 const val YANDEX_API_URL_END_POINT = "v2/informers"
 const val TAG_E = "tag for log.e"
 const val DB_NAME = "History.db"
-const val REQUEST_CODE = 24//com.bogatovnikita.myweather.other.ContentProviderContactsFragment
+const val REQUEST_CODE = 24//com.home.myweather.other.ContentProviderContactsFragment
 
 
